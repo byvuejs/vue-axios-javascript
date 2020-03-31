@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import store from './store';
+// import store from './store';
 
 Vue.use(Router);
 
@@ -32,21 +32,21 @@ export default new Router({
       path: '/',
       name: 'home',
       component: () =>
-        import(/* webpackChunkName: 'home' */ '@/views/Home.vue')
+        import(/* webpackChunkName: 'home' */ '@/views/Home')
     },
     {
       path: '/login',
       name: 'login',
       // beforeEnter: rejectAuthUser, // 라우터에 들어오기전에 이 함수를 실행, 로그인 검증
       component: () =>
-        import(/* webpackChunkName: 'login' */ '@/views/Login.vue')
+        import(/* webpackChunkName: 'login' */ '@/views/Login')
     },
     {
       path: '/mypage',
       name: 'mypage',
       // beforeEnter: onlyAuthUser, // 라우터에 들어오기전에 이 함수를 실행, 로그인 검증
       component: () =>
-        import(/* webpackChunkName: 'mypage' */ '@/views/Mypage.vue')
+        import(/* webpackChunkName: 'mypage' */ '@/views/Mypage')
     },
   ]
 });
